@@ -24,8 +24,8 @@ class BasicSimulation extends Simulation {
   val bundleNameFeed = csv("bundle-name.csv").random.circular
 
 
-  val oneRegenerateRequest = exec(http("regenerate-token")
-    .get("/casc-bundle/regenerate-token?bundleId=${name}")
+  val oneRegenerateRequest = exec(http("regenerate-token_${name}")
+    .post("/casc-bundle/regenerate-token?bundleId=${name}")
     .basicAuth("admin","11f0d873624a87b01f98a7259215aca6d8")
     .check(status.is(200)))
     .pause(1,2)
