@@ -3,9 +3,9 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.gatling.demo</groupId>
-  <artifactId>gatling-maven-plugin-demo</artifactId>
-  <version>3.3.1</version>
+  <groupId>com.angie.workshop</groupId>
+  <artifactId>gatling-workshop</artifactId>
+  <version>1.0</version>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,14 +17,13 @@
     <scala-maven-plugin.version>4.4.0</scala-maven-plugin.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>io.gatling.highcharts</groupId>
-      <artifactId>gatling-charts-highcharts</artifactId>
-      <version>${gatling.version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+<dependencies>
+  <dependency>
+    <groupId>io.gatling.highcharts</groupId>
+    <artifactId>gatling-charts-highcharts</artifactId>
+    <version>3.3.1</version>
+  </dependency>
+</dependencies>
 
   <build>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
@@ -61,7 +60,7 @@
       <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
-        <version>${gatling-maven-plugin.version}</version>
+        <version>3.0.5</version>
       </plugin>
     </plugins>
   </build>
